@@ -53,7 +53,10 @@ li a:hover{
 }
 .Hibiscus-Shrimpprices{
     background-color: rgb(206, 151, 0);
+    height: 175px;
+    padding: 50px;
 }
 .Hibiscus-Shrimpingredients{
     background-color: rgb(255, 220, 104);
+    padding: 50px;
 }

@@ -60,3 +60,12 @@ li a:hover{
     background-color: rgb(255, 220, 104);
     padding: 50px;
 }
+.salmoningredients{
+    background-color: rgb(211, 63, 186);
+    padding: 50px;
+}
+.salmonprices{
+    background-color: rgb(160, 13, 148);
+    height: 175px;
+    padding: 50px;
+}

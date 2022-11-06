@@ -69,3 +69,8 @@ li a:hover{
     height: 175px;
     padding: 50px;
 }
+.info{
+    font-size: 25px;
+    padding: 50px;
+    background-color: rgb(0, 255, 42);
+}

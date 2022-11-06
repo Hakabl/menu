@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chang Family Menu</title>
+    <link rel="stylesheet" href="webstyle.css">
+</head>
+<body>
+    <ul>
+        <li><a href = 'index.html'>Home</a></li>
+        <li><a href = 'steak.html'>8 Ounce Steak</a></li>
+        <li><a href = 'lobster.html'>Crispy Lobster</a></li>
+        <li><a href = 'Hibiscus-Shrimp.html'>Hibiscus Shrimp</a></li>
+        <li><a href = 'Lamb-On-Skewer.html'>Lamb On Skewer</a></li>
+        <li><a href = 'teriyaki-salmon.html'>Teriyaki Salmon</a></li>
+        <li><a href = 'total.html'>Shopping Cart</a></li>
+    </ul>
+    <button id="steak" type="button">Order 8 Ounce Steak ($35)</button>
+    <button id="lobster" type="button">Order Crispy Lobster ($49)</button>
+    <button id="shrimp" type="button">Order Hibiscus Shrimp ($16)</button>
+    <button id="lamb" type="button">Order Lamb On Skewer (1 Skewer) ($2.5)</button>
+    <button id="salmon" type="button">Teriyaki Salmon ($26)</button>
+    <div id = "Price">Total Price = $0</div>
+    <div class="Orders">
+        <div id = "SteakOrder"> Steak Order = </div>
+        <div id = "LobsterOrder"> Lobster Order = </div>
+        <div id = "ShrimpOrder"> Shrimp Order = </div>
+        <div id = "LambOrder"> Lamb Order = </div>
+        <div id = "SalmonOrder"> Salmon Order = </div>
+    </div>
+    <script>
+        var steakcounter = 0;
+        var lobstercounter = 0;
+        var shrimpcounter = 0;
+        var lambcounter = 0;
+        var salmoncounter = 0;
+        var total=0;
+        function printsteakcounter(){
+            steakcounter++;
+            total += 35
+            document.getElementById("Price").innerHTML = "Total Price = $" + total;
+            document.getElementById("SteakOrder").innerHTML = "Steak Order = " + "8 Ounce Steak " + "(" + steakcounter + "x" + ")" ;
+        }
+        function printlobstercounter(){
+            lobstercounter++;
+            total += 49
+            document.getElementById("Price").innerHTML = "Total Price = $" + total;
+            document.getElementById("LobsterOrder").innerHTML = "Lobster Order = " + "Crispy Lobster " + "(" + lobstercounter + "x" + ")";
+            
+        }
+        function printshrimpcounter(){
+            shrimpcounter++;
+            total += 16
+            document.getElementById("Price").innerHTML = "Total Price = $" + total;
+            document.getElementById("ShrimpOrder").innerHTML = "Shrimp Order = " + "Hibiscus Shrimp " + "(" + shrimpcounter + "x" + ")" ;
+        }
+        function printlambcounter(){
+            lambcounter++;
+            total += 2.5
+            document.getElementById("Price").innerHTML = "Total Price = $" + total;
+            document.getElementById("LambOrder").innerHTML = "Lamb Order = " + "Lamb On Skewer " + "(" + lambcounter + "x" + ")" ;
+        }
+        function printsalmoncounter(){
+            salmoncounter++;
+            total += 26
+            document.getElementById("Price").innerHTML = "Total Price = $" + total;
+            document.getElementById("SalmonOrder").innerHTML = "Salmon Order = " + "Teriyaki Salmon " + "(" + salmoncounter + "x" + ")" ;
+        }
+        document.getElementById("steak").addEventListener("click",printsteakcounter);
+        document.getElementById("lobster").addEventListener("click",printlobstercounter);
+        document.getElementById("shrimp").addEventListener("click",printshrimpcounter);
+        document.getElementById("lamb").addEventListener("click",printlambcounter);
+        document.getElementById("salmon").addEventListener("click",printsalmoncounter);
+    </script>
+</body>
+</html>

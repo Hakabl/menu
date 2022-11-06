@@ -12,6 +12,7 @@
             width: 300px;
             height: 100px;
             text-align: center;
+            font-size: 25px;
         }
         button:hover{
             background-color: rgb(0, 255, 191);
@@ -37,7 +38,7 @@
         <li><a href = 'Hibiscus-Shrimp.html'>Hibiscus Shrimp</a></li>
         <li><a href = 'Lamb-On-Skewer.html'>Lamb On Skewer</a></li>
         <li><a href = 'teriyaki-salmon.html'>Teriyaki Salmon</a></li>
-        <li><a href = 'total.html'>Shopping Cart</a></li>
+        <li><a href = 'total.html'>Place Order</a></li>
     </ul>
     <section class="flex-container">
         <button id="steak" type="button">Order Ribeye Steak ($35)</button>
@@ -45,6 +46,7 @@
         <button id="shrimp" type="button">Order Hibiscus Shrimp ($16)</button>
         <button id="lamb" type="button">Order Lamb On Skewer (1 Skewer) ($2.5)</button>
         <button id="salmon" type="button">Teriyaki Salmon ($26)</button>
+        <button id="reset" type="button">Reset Order</button>
     </section>
     <br><br>
     <div class="Orders">
@@ -55,6 +57,7 @@
         <div id = "SalmonOrder">   </div>
         <div id = "Price"> </div>
     </div>
+    <button id="transaction" type="button">Complete Transaction</button>
     <script>
         var steakcounter = 0;
         var lobstercounter = 0;
@@ -93,11 +96,45 @@
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
             document.getElementById("SalmonOrder").innerHTML = "   " + "Teriyaki Salmon " + "(" + salmoncounter + "x" + ")" ;
         }
+        function reset(){
+            steakcounter = 0;
+            lobstercounter = 0;
+            shrimpcounter = 0;
+            lambcounter = 0;
+            salmoncounter = 0;
+            total=0;
+            document.getElementById("Price").innerHTML = " "
+            document.getElementById("SteakOrder").innerHTML = " "
+            document.getElementById("LobsterOrder").innerHTML = " "
+            document.getElementById("ShrimpOrder").innerHTML = " "
+            document.getElementById("LambOrder").innerHTML = " "
+            document.getElementById("SalmonOrder").innerHTML = " "
+        }
+        function transaction(){
+            let number=prompt("Enter Your Credit Card Number:","");
+            if (number != null){
+                alert("Your Credit Card Has Been Declined.")
+            }
+            steakcounter = 0;
+            lobstercounter = 0;
+            shrimpcounter = 0;
+            lambcounter = 0;
+            salmoncounter = 0;
+            total=0;
+            document.getElementById("Price").innerHTML = " "
+            document.getElementById("SteakOrder").innerHTML = " "
+            document.getElementById("LobsterOrder").innerHTML = " "
+            document.getElementById("ShrimpOrder").innerHTML = " "
+            document.getElementById("LambOrder").innerHTML = " "
+            document.getElementById("SalmonOrder").innerHTML = " "
+        }
         document.getElementById("steak").addEventListener("click",printsteakcounter);
         document.getElementById("lobster").addEventListener("click",printlobstercounter);
         document.getElementById("shrimp").addEventListener("click",printshrimpcounter);
         document.getElementById("lamb").addEventListener("click",printlambcounter);
         document.getElementById("salmon").addEventListener("click",printsalmoncounter);
+        document.getElementById("reset").addEventListener("click",reset);
+        document.getElementById("transaction").addEventListener("click",transaction);
     </script>
 </body>
 </html>

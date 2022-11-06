@@ -48,12 +48,12 @@
     </section>
     <br><br>
     <div class="Orders">
-        <div id = "SteakOrder"> Steak Order = </div>
-        <div id = "LobsterOrder"> Lobster Order = </div>
-        <div id = "ShrimpOrder"> Shrimp Order = </div>
-        <div id = "LambOrder"> Lamb Order = </div>
-        <div id = "SalmonOrder"> Salmon Order = </div>
-        <div id = "Price">Total Price = $0</div>
+        <div id = "SteakOrder">   </div>
+        <div id = "LobsterOrder">   </div>
+        <div id = "ShrimpOrder">   </div>
+        <div id = "LambOrder">   </div>
+        <div id = "SalmonOrder">   </div>
+        <div id = "Price"> </div>
     </div>
     <script>
         var steakcounter = 0;
@@ -66,32 +66,32 @@
             steakcounter++;
             total += 35
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
-            document.getElementById("SteakOrder").innerHTML = "Steak Order = " + "Ribeye Steak " + "(" + steakcounter + "x" + ")" ;
+            document.getElementById("SteakOrder").innerHTML = "   " + "Ribeye Steak " + "(" + steakcounter + "x" + ")" ;
         }
         function printlobstercounter(){
             lobstercounter++;
             total += 49
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
-            document.getElementById("LobsterOrder").innerHTML = "Lobster Order = " + "Crispy Lobster " + "(" + lobstercounter + "x" + ")";
+            document.getElementById("LobsterOrder").innerHTML = "  " + "Crispy Lobster " + "(" + lobstercounter + "x" + ")";
             
         }
         function printshrimpcounter(){
             shrimpcounter++;
             total += 16
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
-            document.getElementById("ShrimpOrder").innerHTML = "Shrimp Order = " + "Hibiscus Shrimp " + "(" + shrimpcounter + "x" + ")" ;
+            document.getElementById("ShrimpOrder").innerHTML = "   " + "Hibiscus Shrimp " + "(" + shrimpcounter + "x" + ")" ;
         }
         function printlambcounter(){
             lambcounter++;
             total += 2.5
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
-            document.getElementById("LambOrder").innerHTML = "Lamb Order = " + "Lamb On Skewer " + "(" + lambcounter + "x" + ")" ;
+            document.getElementById("LambOrder").innerHTML = "   " + "Lamb On Skewer " + "(" + lambcounter + "x" + ")" ;
         }
         function printsalmoncounter(){
             salmoncounter++;
             total += 26
             document.getElementById("Price").innerHTML = "Total Price = $" + total;
-            document.getElementById("SalmonOrder").innerHTML = "Salmon Order = " + "Teriyaki Salmon " + "(" + salmoncounter + "x" + ")" ;
+            document.getElementById("SalmonOrder").innerHTML = "   " + "Teriyaki Salmon " + "(" + salmoncounter + "x" + ")" ;
         }
         document.getElementById("steak").addEventListener("click",printsteakcounter);
         document.getElementById("lobster").addEventListener("click",printlobstercounter);
